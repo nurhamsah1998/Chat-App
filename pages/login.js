@@ -1,10 +1,9 @@
 import { auth, provider } from '../firebase';
-import { signInWithPopup } from 'firebase/auth';
 
 function Login() {
   const signIn = () => {
-    // auth.signInWithPopup(provider).catch(alert);
-    signInWithPopup(auth, provider)
+    auth
+      .signInWithPopup(provider)
       .then((res) => {
         console.log(res);
       })
